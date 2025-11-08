@@ -19,7 +19,7 @@ export default function EmailReplyGenerator() {
     setReply('');
 
     try {
-      const response = await fetch('https://email-rg-backend.onrender.com', {
+      const response = await fetch('https://email-rg-backend.onrender.com/generate-reply', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: emailContent, tone })
